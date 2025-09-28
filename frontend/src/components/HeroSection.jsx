@@ -3,6 +3,20 @@ import { Play, Music4, Sparkles } from 'lucide-react';
 import { singerData } from '../data/mock';
 
 const HeroSection = () => {
+  const scrollToMusic = () => {
+    const element = document.getElementById('music');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  
+  const scrollToContact = () => {
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
@@ -30,30 +44,33 @@ const HeroSection = () => {
       {/* Main Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
         <div className="mb-8">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 tracking-wide">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-wide">
             {singerData.name}
           </h1>
-          <p className="text-xl md:text-2xl text-blue-200 font-light mb-6">
+          <p className="text-xl md:text-2xl text-blue-200 font-light mb-8">
             {singerData.tagline}
-          </p>
-          <p className="text-lg text-gray-200 max-w-2xl mx-auto leading-relaxed">
-            {singerData.bio}
           </p>
         </div>
         
         {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <button className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center space-x-3">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <button 
+            onClick={scrollToMusic}
+            className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center space-x-3"
+          >
             <Play className="w-5 h-5 group-hover:scale-110 transition-transform" />
             <span>Listen to Music</span>
           </button>
-          <button className="bg-white/10 backdrop-blur-sm text-white border border-white/30 px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+          <button 
+            onClick={scrollToContact}
+            className="bg-white/10 backdrop-blur-sm text-white border border-white/30 px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
+          >
             Book Performance
           </button>
         </div>
         
         {/* Genres Tags */}
-        <div className="mt-12 flex flex-wrap justify-center gap-3">
+        <div className="flex flex-wrap justify-center gap-3">
           {singerData.genres.map((genre, index) => (
             <span 
               key={index}
