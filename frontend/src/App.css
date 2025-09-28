@@ -1,11 +1,27 @@
 /* Custom styles for Sarmistha Dash Portfolio */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap');
+
 .App {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Custom font for brand name */
+.font-serif {
+  font-family: 'Cinzel', serif;
 }
 
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+}
+
+/* Enhanced glass effect */
+.backdrop-blur-xl {
+  backdrop-filter: blur(24px);
+}
+
+.backdrop-blur-lg {
+  backdrop-filter: blur(16px);
 }
 
 /* Custom gradient backgrounds */
@@ -83,4 +99,12 @@ html {
 ::selection {
   background-color: #ec4899;
   color: white;
+}
+
+/* Glass navbar enhancement */
+.glass-navbar {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 }
