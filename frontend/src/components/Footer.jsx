@@ -9,14 +9,11 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8">
           {/* Brand Section */}
           <div>
-            <div className="flex items-center space-x-3 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-pink-500 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-lg">S</span>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold">{singerData.name}</h3>
-                <p className="text-sm text-gray-400">Classical • Bollywood • Fusion</p>
-              </div>
+            <div className="mb-4">
+              <h3 className="text-2xl font-bold tracking-wider font-serif uppercase">
+                SARMISTHA DASH
+              </h3>
+              <p className="text-sm text-gray-400 tracking-wide">Classical • Bollywood • Fusion</p>
             </div>
             <p className="text-gray-300 leading-relaxed mb-4">
               Creating magical musical experiences that blend tradition with contemporary artistry.
@@ -73,7 +70,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="border-t border-gray-800 pt-8 mt-8 text-center">
           <p className="text-gray-400 text-sm">
-            © 2024 {singerData.name}. All rights reserved. • Bringing melodies to life, one performance at a time.
+            © 2024 SARMISTHA DASH. All rights reserved. • Bringing melodies to life, one performance at a time.
           </p>
         </div>
       </div>

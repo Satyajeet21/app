@@ -6,10 +6,10 @@ export const singerData = {
   bio: "A versatile artist with a soulful voice, Sarmistha brings together the richness of Indian classical music with contemporary Bollywood and folk traditions. Her performances seamlessly blend traditional ragas with modern musical expressions.",
   genres: ["Classical", "Bollywood", "Folk", "Semi-Classical", "Bengali", "Fusion"],
   
-  // Contact information (mock)
+  // Contact information (updated)
   contact: {
     email: "booking@sarmisthadash.com",
-    phone: "+91 98765 43210",
+    phone: "+91 7586923969",
     social: {
       instagram: "@sarmisthadash",
       youtube: "@SarmisthaDashOfficial",
@@ -17,7 +17,7 @@ export const singerData = {
     }
   },
   
-  // Event types
+  // Event types (updated)
   eventTypes: [
     {
       title: "Farewell Parties",
@@ -36,7 +36,7 @@ export const singerData = {
     },
     {
       title: "Musical Nights",
-      description: "Intimate performances for club events and musical evenings",
+      description: "Elegant performances for club events and musical evenings",
       icon: "Music"
     }
   ],

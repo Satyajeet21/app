@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Play, Music } from 'lucide-react';
+import { Play, Pause, Music } from 'lucide-react';
 import { Card } from './ui/card';
 import { Button } from './ui/button';
 import { singerData } from '../data/mock';
@@ -8,7 +8,7 @@ const MusicShowcase = () => {
   const [currentPlaying, setCurrentPlaying] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
   
-  const handlePlay = (songId) => {
+  const handlePlayPause = (songId) => {
     if (currentPlaying === songId) {
       setIsPlaying(!isPlaying);
     } else {
@@ -46,8 +46,8 @@ const MusicShowcase = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {singerData.songs.map((song, index) => (
             <Card key={song.id} className="overflow-hidden hover:shadow-xl transition-all duration-300 border-0 bg-white">
-              {/* Gradient Header */}
-              <div className={`h-16 bg-gradient-to-r ${getGradientColor(index)} relative`}>
+              {/* Thin Gradient Header */}
+              <div className={`h-1 bg-gradient-to-r ${getGradientColor(index)} relative`}>
                 <div className="absolute inset-0 bg-black/10"></div>
               </div>
               
@@ -76,13 +76,22 @@ const MusicShowcase = () => {
                   {song.description}
                 </p>
                 
-                {/* Play Button */}
+                {/* Play/Pause Button */}
                 <Button
-                  onClick={() => handlePlay(song.id)}
+                  onClick={() => handlePlayPause(song.id)}
                   className={`w-full bg-gradient-to-r ${getGradientColor(index)} hover:opacity-90 text-white rounded-full py-3 flex items-center justify-center space-x-2 transition-all duration-200`}
                 >
-                  <Play className="w-4 h-4" />
-                  <span>Preview</span>
+                  {currentPlaying === song.id && isPlaying ? (
+                    <>
+                      <Pause className="w-4 h-4" />
+                      <span>Pause</span>
+                    </>
+                  ) : (
+                    <>
+                      <Play className="w-4 h-4" />
+                      <span>Play</span>
+                    </>
+                  )}
                 </Button>
                 
                 {/* Progress indicator for playing song */}
@@ -91,7 +100,7 @@ const MusicShowcase = () => {
                     <div className="bg-gray-200 rounded-full h-2 relative overflow-hidden">
                       <div className={`bg-gradient-to-r ${getGradientColor(index)} h-full rounded-full transition-all duration-300 animate-pulse`} style={{width: '30%'}}></div>
                     </div>
-                    <p className="text-xs text-gray-500 mt-2 text-center">Playing preview...</p>
+                    <p className="text-xs text-gray-500 mt-2 text-center">Playing now...</p>
                   </div>
                 )}
               </div>
