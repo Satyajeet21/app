@@ -45,6 +45,15 @@ export const singerData = {
   songs: [
     {
       id: 1,
+      title: "Baahon mein Chale aao",
+      artist: "Sarmistha Dash",
+      duration: "4:15",
+      genre: "Bollywood",
+      description: "A romantic Bollywood classic with soulful expression",
+      youtubeUrl: "YOUTUBE_SHORTS_LINK_TO_BE_ADDED" // Placeholder for YouTube link
+    },
+    {
+      id: 2,
       title: "Lag Jaa Gale",
       artist: "Sarmistha Dash",
       duration: "4:32",
@@ -52,7 +61,7 @@ export const singerData = {
       description: "A timeless classic rendered with soulful devotion"
     },
     {
-      id: 2, 
+      id: 3, 
       title: "Reh Na Rahe Hum",
       artist: "Sarmistha Dash",
       duration: "3:45",
@@ -60,7 +69,7 @@ export const singerData = {
       description: "Contemporary Bollywood with classical undertones"
     },
     {
-      id: 3,
+      id: 4,
       title: "Satyam Shivam Sundaram",
       artist: "Sarmistha Dash", 
       duration: "5:12",
@@ -68,7 +77,7 @@ export const singerData = {
       description: "A spiritual journey through melody and devotion"
     },
     {
-      id: 4,
+      id: 5,
       title: "Ek Radha Ek Meera",
       artist: "Sarmistha Dash",
       duration: "4:18",
@@ -76,7 +85,7 @@ export const singerData = {
       description: "Traditional folk tale brought to life through song"
     },
     {
-      id: 5,
+      id: 6,
       title: "Naa Mono Lage Naa",
       artist: "Sarmistha Dash",
       duration: "3:56",
