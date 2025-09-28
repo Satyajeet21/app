@@ -3,6 +3,7 @@ import "./App.css";
 import { BrowserRouter } from "react-router-dom";
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
+import AboutSection from "./components/AboutSection";
 import MusicShowcase from "./components/MusicShowcase";
 import ContactBooking from "./components/ContactBooking";
 import Footer from "./components/Footer";
@@ -15,6 +16,7 @@ function App() {
         <Header />
         <main>
           <HeroSection />
+          <AboutSection />
           <MusicShowcase />
           <ContactBooking />
         </main>
