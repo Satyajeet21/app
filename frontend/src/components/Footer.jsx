@@ -10,8 +10,8 @@ const Footer = () => {
           {/* Brand Section */}
           <div>
             <div className="mb-4">
-              <h3 className="text-2xl font-bold tracking-wider font-serif uppercase">
-                SARMISTHA DASH
+              <h3 className="text-3xl font-bold tracking-wider signature-font">
+                Sarmistha Dash
               </h3>
               <p className="text-sm text-gray-400 tracking-wide">Classical • Bollywood • Fusion</p>
             </div>
@@ -54,10 +54,20 @@ const Footer = () => {
             
             {/* Social Links */}
             <div className="flex space-x-4">
-              <a href="#" className="p-2 bg-gray-800 rounded-full hover:bg-pink-600 transition-colors">
+              <a 
+                href={singerData.contact.social.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 bg-gray-800 rounded-full hover:bg-pink-600 transition-colors"
+              >
                 <Instagram className="w-4 h-4" />
               </a>
-              <a href="#" className="p-2 bg-gray-800 rounded-full hover:bg-red-600 transition-colors">
+              <a 
+                href={singerData.contact.social.youtube}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 bg-gray-800 rounded-full hover:bg-red-600 transition-colors"
+              >
                 <Youtube className="w-4 h-4" />
               </a>
               <a href="#" className="p-2 bg-gray-800 rounded-full hover:bg-blue-600 transition-colors">

@@ -72,13 +72,17 @@ const ContactBooking = () => {
                   <h4 className="text-lg font-semibold text-gray-900 mb-4">Social Media</h4>
                   <div className="flex space-x-4">
                     <a 
-                      href="#" 
+                      href={singerData.contact.social.instagram}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="p-4 bg-gradient-to-br from-pink-500 to-rose-500 rounded-xl hover:from-pink-600 hover:to-rose-600 transition-all duration-200 transform hover:scale-105 shadow-lg"
                     >
                       <Instagram className="w-6 h-6 text-white" />
                     </a>
                     <a 
-                      href="#" 
+                      href={singerData.contact.social.youtube}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="p-4 bg-gradient-to-br from-red-500 to-red-600 rounded-xl hover:from-red-600 hover:to-red-700 transition-all duration-200 transform hover:scale-105 shadow-lg"
                     >
                       <Youtube className="w-6 h-6 text-white" />

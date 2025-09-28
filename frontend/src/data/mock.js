@@ -8,11 +8,11 @@ export const singerData = {
   
   // Contact information (updated)
   contact: {
-    email: "booking@sarmisthadash.com",
+    email: "dashsw24@gmail.com",
     phone: "+91 7586923969",
     social: {
-      instagram: "@sarmisthadash",
-      youtube: "@SarmisthaDashOfficial",
+      instagram: "https://www.instagram.com/resilient_girl27/?hl=af",
+      youtube: "https://www.youtube.com/@Shimmer_glow99",
       facebook: "SarmisthaDashMusic"
     }
   },
