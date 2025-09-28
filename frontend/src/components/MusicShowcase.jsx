@@ -9,6 +9,15 @@ const MusicShowcase = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   
   const handlePlayPause = (songId) => {
+    const song = singerData.songs.find(s => s.id === songId);
+    
+    // If song has a YouTube URL, open it in a new tab
+    if (song && song.youtubeUrl && song.youtubeUrl !== "YOUTUBE_SHORTS_LINK_TO_BE_ADDED") {
+      window.open(song.youtubeUrl, '_blank');
+      return;
+    }
+    
+    // Otherwise, handle mock play/pause
     if (currentPlaying === songId) {
       setIsPlaying(!isPlaying);
     } else {
